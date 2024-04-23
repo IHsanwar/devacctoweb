@@ -13,15 +13,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "SELECT * FROM accounts WHERE email = '$email'";
     $result = $konek->query($query);
 
-    if ($result->num_rows == 1) {
+    if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $hashedPassword = $row['password'];
 
         // Verify the password using password_verify
         if (password_verify($password, $hashedPassword)) {
             // Login successful
-            $_SESSION['email'] = $email;
-            header("Location: index.php");
+            $_SESSION['email'] = $email ['email'];
+            $_SESSION['is_login'] = true;
+            
+            header("location: index.php");
             exit();
         } else {
             // Login failed

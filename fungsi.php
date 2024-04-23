@@ -20,10 +20,24 @@ function input($konek, $nama, $kelas) {
     if ($konek->query($sql) === TRUE) {
         $message = "Data berhasil diinput";
         echo "<script type='text/javascript'>alert('$message');</script>";
+        
     } else {
         echo "Error: " . $sql . "<br>" . $konek->error;
     }
 }
+
+
+function delete($konek, $id){
+    $id = mysqli_real_escape_string($konek, $id);
+    $sql = "DELETE FROM datasiswa WHERE id=$id";
+    var_dump($sql);
+    if ($konek->query($sql) === TRUE) {
+        echo "Record deleted successfully";
+    } else {
+        echo "Error deleting record: " . $konek->error;
+    }
+}
+
 
 
  

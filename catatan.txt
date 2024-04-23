@@ -1,0 +1,9 @@
+bENTAR ANJIER
+gw lagi benerin fungsi gw juga
+apalah di live shere kan ada menu komentar
+oya
+oi
+        if (password_verify($password, $hashedPassword))
+        itu variable password kenapa dua
+        gatau tanya chat gpt
+        
