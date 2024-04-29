@@ -38,6 +38,16 @@ function delete($konek, $id){
     }
 }
 
+function edit($konek, $id){
+
+    // Update the data in the database
+    mysqli_query($koneksi, "UPDATE datasiswa SET nama='$nama', kelas='$kelas' WHERE id='$id'");
+
+    // Redirect back to the index page (or wherever you want)
+    header("location:index.php");
+}
+?>
+
 
 
  
