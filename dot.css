@@ -89,3 +89,13 @@ input[type="submit"]:hover {
 .pen {
     color: white; /* Set the color to white */
 }
+
+#kelas {
+    margin-bottom: 10px;
+    width: 200px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    font-size: 16px; /* Font size */
+    padding: 8px; /* Padding inside the select */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+}

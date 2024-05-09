@@ -2,7 +2,7 @@
 include("connection.php");
 //fungsi membaca database//
 function read($konek){
-    $select = "select * from datasiswa"; 
+    $select = "SELECT * FROM datasiswa"; 
     $res = ($konek->query($select));    
     $datas =[];
 

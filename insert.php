@@ -8,7 +8,6 @@ include("fungsi.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama = $_POST["nama"];
     $kelas = $_POST["kelas"];
-
     
     input($konek, $nama, $kelas);
     header("location: /aplikasidatadevaccto");
@@ -19,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP MySQL Form</title>
+    <title>Data Siswa</title>
     <link rel="stylesheet" href="dot.css">
     
 </head>
@@ -34,8 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" name="nama" required><br>
                 
                 <label for="kelas">Kelas:</label>
-                <input type="text" name="kelas" required><br>
-                
+                <select name="kelas" id="kelas">
+                    <option value="X RPL 1">X RPL 1</option>
+                    <option value="X RPL 2">X RPL 2</option>
+                    <option value="X RPL 3">X RPL 3</option>
+                    </select>
                 <input type="submit" value="Submit">
                 
             </form>

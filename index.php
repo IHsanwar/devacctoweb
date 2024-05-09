@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
             <th>Nomor</th>
             <th>Nama</th>
             <th>Kelas</th>
+            <th>   </th>
             <th>Action</th>
         </tr>
     </thead>
@@ -60,11 +61,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
             <td><?php echo $no++;?></td>
             <td><?php echo $row['nama_siswa'];?></td>
             <td><?php echo $row['kelas'];?></td>
-            <td><form method="post">
-                    <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
-                    <button type="button" onclick="return delete_dd(<?php echo $row['id']; ?>)">Delete</button>
+            <td></td>
+            <td>
+                <form method="get" action="edit.php" style="display: inline-block;">
+                <input type="hidden" name="edit" value="<?php echo $row['id']; ?>>">
+                <input type="button" class="button-small" onclick="location.href='edit.php?id=<?php echo $row['id']; ?>';" value="Edit" />
+                
+                
+                    <input type= "hidden" name="delete_id" value="<?php echo $row['id']; ?>">
+                    <button type="button" class="button-small2" onclick="return delete_dd(<?php echo $row['id']; ?>)">Delete</button>
 
-                    </form>
+                    
+            </form>
             </td>
             
         <?php }?>
