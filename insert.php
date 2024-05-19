@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     <div id="myModal" class="modal">
         <div class="modal-content">
+            
             <span class="close">&times;</span>
             <h2>Tambah Data</h2>
             <form action="insert.php" method="post">
