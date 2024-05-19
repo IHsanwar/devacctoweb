@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span class="close">&times;</span>
             <h2>Tambah Data</h2>
             <form action="insert.php" method="post">
-                <label for="nama">Nama:</label>
+                <label for="nama">Nama:</label> 
                 <input type="text" name="nama" required><br>
                 
                 <label for="kelas">Kelas:</label>
